@@ -17,7 +17,7 @@ jobs:
                echo 'log step 1'
             - name: Get user input
               run: |
-               echo 'User input: ${{ github.event.inputs.user_input }}''
+               echo "User input: ${{ github.event.inputs.user_input }}"
             - name: define variable
               run: |
                echo 'I am a new step'
