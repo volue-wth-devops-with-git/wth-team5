@@ -8,5 +8,5 @@ jobs:
         name: Build and deploy Job
         runs-on: ubunt-latest
         steps:
-            - name: Checkout
+            - name: test echo
               run: echo 'log step 1'
