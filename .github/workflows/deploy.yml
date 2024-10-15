@@ -2,6 +2,14 @@ name: Team 5 workflow for deploy
 
 on:
     workflow_dispatch:
+        inputs:
+            appenv:
+                type: choice
+                description: Choose the target environment
+                options: 
+                    - dev
+                    - test
+                    - prod
 
 env: 
     targetEnv: dev
@@ -23,6 +31,6 @@ jobs:
                     subscriptionId: ${{ vars.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ vars.AZURE_RESOURCE_GROUP_NAME }}
                     template: ./InfrastructureAsCode/main.bicep
-                    parameters: environment=${{ env.targetEnv }}
+                    parameters: environment=${{ github.event.inputs.appenv }
 
             
