@@ -1,0 +1,14 @@
+name: Team 5 workflow for git action new name
+
+on:
+    workflow_dispatch:
+      
+jobs:
+    az_login:
+        name: login using secrets
+        runs-on: ubuntu-latest
+        steps:
+            - name: fetch secrets
+              run: az login --service-principal -u ${{secrets.CLIENT_ID}} -p ${{secrets.CLIENT_SECRET}} --tenant aba511b8-f19b-47de-9aef-75c477d39133
+
+            
