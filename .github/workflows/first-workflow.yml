@@ -1,4 +1,4 @@
-name: Team 5 workflow for git action
+name: Team 5 workflow for git action new name
 
 on:
     workflow_dispatch:
@@ -9,4 +9,5 @@ jobs:
         runs-on: ubunt-latest
         steps:
             - name: test echo
-              run: echo 'log step 1'
+              run: |
+               echo 'log step 1'
