@@ -1,0 +1,12 @@
+name: Team 5 workflow for git action
+
+on:
+    workflow_dispatch:
+
+jobs:
+    build_and_deploy_job:
+        name: Build and deploy Job
+        runs-on: ubunt-latest
+        steps:
+            - name: Checkout
+              run: echo 'log step 1'
