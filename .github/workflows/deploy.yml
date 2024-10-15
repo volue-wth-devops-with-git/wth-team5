@@ -14,12 +14,15 @@ jobs:
             - name: fetch secrets
               run: az login --service-principal -u ${{secrets.CLIENT_ID}} -p=${{secrets.CLIENT_SECRET}} --tenant aba511b8-f19b-47de-9aef-75c477d39133
 
+            - name: Checkout 
+              uses: actions/checkout@v2
+
             - name: Run ARM deploy
               uses: azure/arm-deploy@v1
               with:
                     subscriptionId: ${{ vars.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ vars.AZURE_RESOURCE_GROUP_NAME }}
-                    template: InfrastructureAsCode/main.bicep
+                    template: ./InfrastructureAsCode/main.bicep
                     parameters: environment=${{ env.targetEnv }}
 
             
