@@ -31,6 +31,6 @@ jobs:
                     subscriptionId: ${{ vars.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ vars.AZURE_RESOURCE_GROUP_NAME }}
                     template: ./InfrastructureAsCode/main.bicep
-                    parameters: environment=${{ github.event.inputs.appenv }
+                    parameters: environment=${{ github.event.inputs.appenv }}
 
             
