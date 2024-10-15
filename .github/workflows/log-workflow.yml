@@ -18,8 +18,11 @@ on:
           type: boolean
         environment:
           description: 'Environment to run tests against'
-          type: environment
+          type: choice
           required: true
+          options:
+          - staging
+          - not-staging
   
 jobs:
     log-the-inputs:
