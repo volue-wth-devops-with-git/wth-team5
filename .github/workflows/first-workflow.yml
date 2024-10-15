@@ -2,6 +2,10 @@ name: Team 5 workflow for git action new name
 
 on:
     workflow_dispatch:
+        inputs:
+            user_input:
+                description: 'Please provide your input'
+                required: true
 
 jobs:
     build_and_deploy_job:
@@ -11,6 +15,9 @@ jobs:
             - name: test echo
               run: |
                echo 'log step 1'
+            - name: Get user input
+              run: |
+               echo 'User input: ${{ github.event.inputs.user_input }}''
             - name: define variable
               run: |
                echo 'I am a new step'
