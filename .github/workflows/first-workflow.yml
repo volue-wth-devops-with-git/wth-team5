@@ -11,3 +11,6 @@ jobs:
             - name: test echo
               run: |
                echo 'log step 1'
+            - name: new echo
+              run: |
+               echo 'I am a new step'
