@@ -1,4 +1,4 @@
-name: Team 5 workflow for git action new name
+name: Team 5 workflow for deploy
 
 on:
     workflow_dispatch:
