@@ -19,7 +19,7 @@ jobs:
               with:
                     subscriptionId: ${{ vars.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ vars.AZURE_RESOURCE_GROUP_NAME }}
-                    template: /InfrastructureAsCode/main.bicep
+                    template: ../InfrastructureAsCode/main.bicep
                     parameters: environment=${{ env.targetEnv }}
 
             
